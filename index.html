@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RankFirst SEO Agency | Boost Your Online Presence</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #2563eb;
+            --secondary: #0f172a;
+            --accent: #10b981;
+            --light: #f8fafc;
+            --gray: #64748b;
+        }
+        
+        body {
+            font-family: 'Inter', 'Segoe UI', sans-serif;
+            color: var(--secondary);
+            overflow-x: hidden;
+        }
+        
+        .navbar {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 15px 0;
+        }
+        
+        .hero-section {
+            background: linear-gradient(135deg, rgba(37,99,235,0.9) 0%, rgba(16,185,129,0.85) 100%), url('https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?ixlib=rb-4.0.3') no-repeat center center;
+            background-size: cover;
+            padding: 120px 0 100px;
+            color: white;
+            position: relative;
+        }
+        
+        .section-title {
+            position: relative;
+            margin-bottom: 50px;
+            font-weight: 700;
+        }
+        
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: var(--accent);
+        }
+        
+        .service-card {
+            transition: all 0.3s ease;
+            border-radius: 12px;
+            overflow: hidden;
+            border: none;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            height: 100%;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        
+        .service-icon {
+            width: 70px;
+            height: 70px;
+            background: rgba(16, 185, 129, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            color: var(--accent);
+            font-size: 28px;
+        }
+        
+        .stats-section {
+            background-color: var(--light);
+            padding: 80px 0;
+        }
+        
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+        
+        .testimonial-card {
+            border-radius: 12px;
+            border: none;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            padding: 30px;
+            margin: 20px 0;
+        }
+        
+        .client-img {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--accent);
+        }
+        
+        .contact-section {
+            background: linear-gradient(135deg, var(--secondary) 0%, #1e293b 100%);
+            color: white;
+            padding: 100px 0;
+        }
+        
+        .form-control {
+            border-radius: 8px;
+            padding: 12px 15px;
+            border: 1px solid #334155;
+            background-color: #1e293b;
+            color: white;
+        }
+        
+        .form-control:focus {
+            background-color: #1e293b;
+            border-color: var(--accent);
+            color: white;
+            box-shadow: none;
+        }
+        
+        .btn-primary {
+            background-color: var(--accent);
+            border: none;
+            padding: 12px 30px;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            background-color: #0da271;
+            transform: translateY(-3px);
+        }
+        
+        .footer {
+            background-color: #0b1120;
+            color: #94a3b8;
+            padding: 60px 0 30px;
+        }
+        
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255,255,255,0.1);
+            color: white;
+            margin-right: 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .social-icon:hover {
+            background: var(--accent);
+            transform: translateY(-3px);
+        }
+        
+        .scroll-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: var(--accent);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            cursor: pointer;
+            opacity: 0;
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+        
+        .scroll-top.active {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#" style="color: var(--primary);">
+                <i class="fas fa-chart-line me-2"></i>RankFirst SEO
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#hero">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#results">Results</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+                <button class="btn btn-primary ms-lg-3">Get Started</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h1 class="display-4 fw-bold mb-4">Dominate Search Rankings & Drive More Traffic</h1>
+                    <p class="lead mb-5">Data-driven SEO strategies that deliver measurable results. We help businesses increase organic traffic, improve conversions, and maximize ROI.</p>
+                    <div class="d-flex flex-wrap gap-3">
+                        <button class="btn btn-primary px-4 py-3">Free SEO Audit</button>
+                        <button class="btn btn-outline-light px-4 py-3">How We Work</button>
+                    </div>
+                </div>
+                <div class="col-lg-6 d-none d-lg-block">
+                    <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?ixlib=rb-4.0.3" alt="SEO Analytics" class="img-fluid rounded shadow">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-5">
+        <div class="container py-5">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Our SEO Services</h2>
+                <p class="text-muted w-75 mx-auto">Comprehensive SEO solutions tailored to your business goals and industry demands.</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-card card h-100">
+                        <div class="card-body p-4">
+                            <div class="service-icon">
+                                <i class="fas fa-search"></i>
+                            </div>
+                            <h5 class="card-title fw-bold">Technical SEO</h5>
+                            <p class="card-text">Website architecture optimization, speed improvements, mobile optimization, and indexability fixes.</p>
+                            <a href="#" class="text-primary text-decoration-none fw-bold">Learn More <i class="fas fa-arrow-right ms-2"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-card card h-100">
+                        <div class="card-body p-4">
+                            <div class="service-icon">
+                                <i class="fas fa-pen-fancy"></i>
+                            </div>
+                            <h5 class="card-title fw-bold">Content Strategy</h5>
+                            <p class="card-text">Keyword research, content creation, and optimization to attract and engage your target audience.</p>
+                            <a href="#" class="text-primary text-decoration-none fw-bold">Learn More <i class="fas fa-arrow-right ms-2"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-card card h-100">
+                        <div class="card-body p-4">
+                            <div class="service-icon">
+                                <i class="fas fa-link"></i>
+                            </div>
+                            <h5 class="card-title fw-bold">Link Building</h5>
+                            <p class="card-text">High-quality backlink acquisition strategies to boost domain authority and search rankings.</p>
+                            <a href="#" class="text-primary text-decoration-none fw-bold">Learn More <i class="fas fa-arrow-right ms-2"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-card card h-100">
+                        <div class="card-body p-4">
+                            <div class="service-icon">
+                                <i class="fas fa-shopping-cart"></i>
+                            </div>
+                            <h5 class="card-title fw-bold">E-commerce SEO</h5>
+                            <p class="card-text">Product page optimization, category structure, and technical solutions for online stores.</p>
+                            <a href="#" class="text-primary text-decoration-none fw-bold">Learn More <i class="fas fa-arrow-right ms-2"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-card card h-100">
+                        <div class="card-body p-4">
+                            <div class="service-icon">
+                                <i class="fas fa-map-marked-alt"></i>
+                            </div>
+                            <h5 class="card-title fw-bold">Local SEO</h5>
+                            <p class="card-text">Google My Business optimization, local citations, and strategies to dominate local search results.</p>
+                            <a href="#" class="text-primary text-decoration-none fw-bold">Learn More <i class="fas fa-arrow-right ms-2"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-card card h-100">
+                        <div class="card-body p-4">
+                            <div class="service-icon">
+                                <i class="fas fa-chart-bar"></i>
+                            </div>
+                            <h5 class="card-title fw-bold">SEO Analytics</h5>
+                            <p class="card-text">Comprehensive reporting, performance tracking, and data-driven strategy adjustments.</p>
+                            <a href="#" class="text-primary text-decoration-none fw-bold">Learn More <i class="fas fa-arrow-right ms-2"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results Section -->
+    <section id="results" class="stats-section">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Proven Results</h2>
+                <p class="text-muted w-75 mx-auto">Our data-driven approach delivers tangible results for businesses across industries.</p>
+            </div>
+            
+            <div class="row text-center">
+                <div class="col-md-3 col-6 mb-4">
+                    <div class="stat-number">187%</div>
+                    <p class="text-muted">Avg. Traffic Growth</p>
+                </div>
+                <div class="col-md-3 col-6 mb-4">
+                    <div class="stat-number">3.5x</div>
+                    <p class="text-muted">ROI Increase</p>
+                </div>
+                <div class="col-md-3 col-6 mb-4">
+                    <div class="stat-number">92%</div>
+                    <p class="text-muted">Client Retention</p>
+                </div>
+                <div class="col-md-3 col-6 mb-4">
+                    <div class="stat-number">450+</div>
+                    <p class="text-muted">Projects Completed</p>
+                </div>
+            </div>
+            
+            <div class="row mt-5 align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3" alt="SEO Results" class="img-fluid rounded shadow">
+                </div>
+                <div class="col-lg-6">
+                    <h3 class="fw-bold mb-4">Real Impact on Business Growth</h3>
+                    <p>Our clients experience significant improvements in key business metrics:</p>
+                    <ul class="list-unstyled">
+                        <li class="mb-3"><i class="fas fa-check-circle text-success me-2"></i> Average 65% increase in organic leads</li>
+                        <li class="mb-3"><i class="fas fa-check-circle text-success me-2"></i> 40% reduction in customer acquisition cost</li>
+                        <li class="mb-3"><i class="fas fa-check-circle text-success me-2"></i> 3x more keyword rankings in top positions</li>
+                        <li class="mb-3"><i class="fas fa-check-circle text-success me-2"></i> 50% faster website loading speed</li>
+                    </ul>
+                    <button class="btn btn-primary mt-3">See Case Studies</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-5">
+        <div class="container py-5">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Client Success Stories</h2>
+                <p class="text-muted w-75 mx-auto">Don't just take our word for it - see what our clients have to say.</p>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <div class="testimonial-card">
+                        <div class="d-flex align-items-center mb-4">
+                            <img src="https://randomuser.me/api/portraits/women/45.jpg" class="client-img me-3">
+                            <div>
+                                <h5 class="mb-0 fw-bold">Sarah Johnson</h5>
+                                <small class="text-muted">Marketing Director, TechStart</small>
+                            </div>
+                        </div>
+                        <p class="mb-0">"RankFirst SEO transformed our online presence. Organic traffic increased by 240% in just 6 months, and we're now ranking for all our target keywords."</p>
+                        <div class="mt-3 text-warning">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 mb-4">
+                    <div class="testimonial-card">
+                        <div class="d-flex align-items-center mb-4">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" class="client-img me-3">
+                            <div>
+                                <h5 class="mb-0 fw-bold">Michael Torres</h5>
+                                <small class="text-muted">CEO, Global Retailers</small>
+                            </div>
+                        </div>
+                        <p class="mb-0">"The team's technical SEO expertise fixed our site architecture issues that we didn't even know existed. Our conversion rate increased by 35% after implementation."</p>
+                        <div class="mt-3 text-warning">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 mb-4">
+                    <div class="testimonial-card">
+                        <div class="d-flex align-items-center mb-4">
+                            <img src="https://randomuser.me/api/portraits/women/68.jpg" class="client-img me-3">
+                            <div>
+                                <h5 class="mb-0 fw-bold">Jennifer Lee</h5>
+                                <small class="text-muted">Founder, EcoProducts</small>
+                            </div>
+                        </div>
+                        <p class="mb-0">"Their content strategy and link building efforts helped us dominate our niche. We've gone from page 4 to top 3 positions for our most valuable keywords."</p>
+                        <div class="mt-3 text-warning">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <h2 class="section-title text-white">Ready to Grow Your Business?</h2>
+                    <p class="mb-5 w-75 mx-auto">Get your free SEO audit and strategy session. Let's discuss how we can help you achieve your business goals through search engine optimization.</p>
+                    
+                    <div class="row g-4">
+                        <div class="col-md-6">
+                            <div class="bg-dark p-4 rounded h-100">
+                                <i class="fas fa-phone-alt fa-2x mb-3 text-accent"></i>
+                                <h5 class="fw-bold">Call Us</h5>
+                                <p class="mb-0">+1 (555) 123-4567</p>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-6">
+                            <div class="bg-dark p-4 rounded h-100">
+                                <i class="fas fa-envelope fa-2x mb-3 text-accent"></i>
+                                <h5 class="fw-bold">Email Us</h5>
+                                <p class="mb-0">info@rankfirstseo.com</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <form class="mt-5">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <input type="text" class="form-control" placeholder="Your Name">
+                            </div>
+                            <div class="col-md-6">
+                                <input type="email" class="form-control" placeholder="Your Email">
+                            </div>
+                            <div class="col-md-6">
+                                <input type="tel" class="form-control" placeholder="Phone Number">
+                            </div>
+                            <div class="col-md-6">
+                                <input type="text" class="form-control" placeholder="Website URL">
+                            </div>
+                            <div class="col-12">
+                                <textarea class="form-control" rows="4" placeholder="Tell us about your project"></textarea>
+                            </div>
+                            <div class="col-12">
+                                <button type="submit" class="btn btn-primary w-100 py-3 fw-bold">Get Your Free SEO Audit</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-4">
+                    <h5 class="text-white mb-4"><i class="fas fa-chart-line me-2"></i>RankFirst SEO</h5>
+                    <p>We help businesses increase organic visibility, drive qualified traffic, and generate more leads through data-driven SEO strategies.</p>
+                    <div class="mt-4">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-4">
+                    <h5 class="text-white mb-4">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-muted">Home</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-muted">About Us</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-muted">Services</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-muted">Case Studies</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-muted">Blog</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-2 col-md-4">
+                    <h5 class="text-white mb-4">Services</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-muted">Technical SEO</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-muted">Content Marketing</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-muted">Link Building</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-muted">Local SEO</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-muted">E-commerce SEO</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-4 col-md-4">
+                    <h5 class="text-white mb-4">Newsletter</h5>
+                    <p class="text-muted">Subscribe to receive SEO tips and industry insights.</p>
+                    <div class="input-group">
+                        <input type="email" class="form-control" placeholder="Your Email">
+                        <button class="btn btn-primary">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            
+            <hr class="mt-5 border-secondary">
+            
+            <div class="row mt-4">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0">&copy; 2023 RankFirst SEO. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <a href="#" class="text-muted me-3 text-decoration-none">Privacy Policy</a>
+                    <a href="#" class="text-muted text-decoration-none">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top -->
+    <div class="scroll-top">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Scroll to top button
+        const scrollTop = document.querySelector('.scroll-top');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                scrollTop.classList.add('active');
+            } else {
+                scrollTop.classList.remove('active');
+            }
+        });
+        
+        scrollTop.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
